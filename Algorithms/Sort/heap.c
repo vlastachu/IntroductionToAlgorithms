@@ -20,7 +20,7 @@ inline void maxHeapify (int* A, unsigned int i, unsigned int heapSize){
 }
 
 inline void buildMaxHeap(int* A, unsigned int length){
-    for(int i = length/2 - 1; i >= 0; i--)
+    for(unsigned int i = length/2 - 1; i >= 0; i--)
         maxHeapify(A, i, length);
 }
 
@@ -34,13 +34,11 @@ void heapSort(int* A, unsigned int length){
 
 
 int main(int argc, char const *argv[]){
-    int A[1<<19];
-    int i = 1;
+    int A[50];
     heapSort(A, sizeof(A)/sizeof(int));
     for (int i = 0; i < 28; ++i)
-    {
         printf("%i ", A[i]);
-    }
+    int i;
     scanf("%i", i);
     return 0;
 }
